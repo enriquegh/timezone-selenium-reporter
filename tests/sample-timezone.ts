@@ -1,3 +1,5 @@
+import { expect } from "chai";
+
 describe("Timezone Test", () => {
     it("should go to time.is", () => {
         browser.url("https://time.is/");
@@ -12,6 +14,7 @@ describe("Timezone Test", () => {
             return Date().toString()
         });
         console.log(`Date from browser JS: ${dateinfo}`);
+        expect(dateinfo).to.contain('Pacific')
     
     })
 

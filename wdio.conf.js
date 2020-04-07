@@ -7,6 +7,7 @@ const baseCapability = {
     platform:"macOS 10.13",
     browserName: 'googlechrome',
     version: '75.0',
+    build: process.env.SAUCE_BUILD_NAME || `timezone-reporter-build ${new Date().toISOString()}`
 }
 
 exports.config = {
